@@ -3,6 +3,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import pickle
 import streamlit as st
+import os
+
 
 
 # Set the page title and description
@@ -11,7 +13,9 @@ st.write("""
 This app predicts whether a student will be admitted to UCLA  based on their SAT scores,GPA, and other scores.
 """)
 
-Nmodel = open("models\\Neural_model.pkl", "rb")
+current_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(current_dir, "models", "Neural_model.pkl")
+Nmodel = open(model_path, "rb")
 Nmodel = pickle.load(Nmodel)
 
 
