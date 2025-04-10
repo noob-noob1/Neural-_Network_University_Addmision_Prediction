@@ -15,8 +15,7 @@ This app predicts whether a student will be admitted to UCLA  based on their SAT
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(current_dir, "models", "Neural_model.pkl")
-#Nmodel = open(model_path, "rb")
-#Nmodel = pickle.load(Nmodel)
+
 
 try:
     with open(model_path, "rb") as file:
