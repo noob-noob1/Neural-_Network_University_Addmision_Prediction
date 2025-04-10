@@ -11,7 +11,7 @@ st.write("""
 This app predicts whether a student will be admitted to UCLA  based on their SAT scores,GPA, and other scores.
 """)
 
-Nmodel = open("models\Neural_model.pkl", "rb")
+Nmodel = open("models\\Neural_model.pkl", "rb")
 Nmodel = pickle.load(Nmodel)
 
 
