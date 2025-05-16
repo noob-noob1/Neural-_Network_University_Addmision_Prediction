@@ -13,13 +13,15 @@ st.write("""
 This app predicts whether a student will be admitted to UCLA  based on their SAT scores,GPA, and other scores.
 """)
 
+# Get absolute path to current directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the correct path to the model
 model_path = os.path.join(current_dir, "models", "Neural_model.pkl")
 
-
-rf_pickle = open("models\\Neural_model.pkl", "rb")
-rf_model = pickle.load(rf_pickle)
-rf_pickle.close()
+# Open and load the model
+with open(model_path, "rb") as rf_pickle:
+    rf_model = pickle.load(rf_pickle)
 
 
 
