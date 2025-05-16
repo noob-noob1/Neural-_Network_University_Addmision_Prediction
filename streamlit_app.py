@@ -17,7 +17,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(current_dir, "models", "Neural_model.pkl")
 
 
-rf_pickle = open(r"models\Neural_model.pkl", "rb")
+rf_pickle = open("models\\Neural_model.pkl", "rb")
 rf_model = pickle.load(rf_pickle)
 rf_pickle.close()
 
