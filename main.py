@@ -5,7 +5,7 @@ from src.models.predict_model import evaluate_model
 
 if __name__ == "__main__":
     # Load and preprocess the data
-    data_path = "data\raw\Admission(in).csv"
+    data_path = r"data\raw\Admission(in).csv"
     df = load_and_preprocess_data(data_path)
 
     # Create dummy variables and separate features and target

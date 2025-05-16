@@ -17,12 +17,10 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(current_dir, "models", "Neural_model.pkl")
 
 
-try:
-    with open(model_path, "rb") as file:
-        model = pickle.load(file)
-except Exception as e:
-    import streamlit as st
-    st.error(f"Failed to load model: {e}")
+rf_pickle = open("models\Neural_model.pkl", "rb")
+rf_model = pickle.load(rf_pickle)
+rf_pickle.close()
+
 
 
 
