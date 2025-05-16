@@ -126,7 +126,7 @@ if submitted:
     ]]
 
     # Make prediction
-    new_prediction = Nmodel.predict(prediction_input)
+    new_prediction = rf_model.predict(prediction_input)
 
     # Display result
     st.subheader("Prediction Result:")
